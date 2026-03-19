@@ -45,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.stat-card, .about-card, .mission-card, .donate-card, .contact-card, .gallery-item, .media-card').forEach(el => {
+document.querySelectorAll('.stat-card, .about-card, .mission-card, .donate-card, .contact-card, .gallery-item, .media-card, .team-card, .advisor-card').forEach(el => {
     observer.observe(el);
 });
 
@@ -61,7 +61,7 @@ window.addEventListener('scroll', () => {
         const link = document.querySelector(`.nav-links a[href="#${id}"]`);
         if (link) {
             if (scrollPos >= top && scrollPos < top + height) {
-                link.style.color = '#1B5E20';
+                link.style.color = '#1A535C';
                 link.style.fontWeight = '600';
             } else {
                 link.style.color = '';
