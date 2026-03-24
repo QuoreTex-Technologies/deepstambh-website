@@ -92,7 +92,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 78px;
 }
 
 .logo {
@@ -101,8 +101,10 @@ img {
     gap: 10px;
 }
 
-.logo-icon {
-    font-size: 28px;
+.logo-img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -112,18 +114,18 @@ img {
 }
 
 .logo-marathi {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--primary);
     font-family: 'Noto Sans Devanagari', sans-serif;
 }
 
-.logo-english {
+.logo-sub {
+    font-family: 'Noto Sans Devanagari', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    color: var(--gray-600);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -239,7 +241,9 @@ img {
     margin: 0 auto 28px;
     border-radius: 50%;
     overflow: hidden;
+    background: rgba(255,255,255,0.95);
     border: 4px solid rgba(255,255,255,0.3);
+    padding: 12px;
     box-shadow:
         0 0 40px rgba(244,196,48,0.3),
         0 0 80px rgba(212,119,11,0.15),
@@ -250,7 +254,7 @@ img {
 .hero-logo-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @keyframes logoGlow {
@@ -637,17 +641,19 @@ img {
 
 .founder-card {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 60px;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
     align-items: start;
     background: var(--white);
     border-radius: var(--radius-lg);
     padding: 48px;
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
 }
 
 .founder-image {
-    position: relative;
+    position: sticky;
+    top: 96px;
 }
 
 .founder-image img {
@@ -732,38 +738,71 @@ img {
 }
 
 .founder-designation-sub {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-light);
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
-.founder-achievements {
+.founder-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 24px;
 }
 
-.founder-achievements h4 {
+.founder-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(26,83,92,0.08);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(26,83,92,0.15);
+}
+
+.founder-detail-block {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.founder-detail-block:last-of-type {
+    border-bottom: none;
+}
+
+.founder-detail-block h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.founder-achievements ul {
+.founder-detail-block p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.founder-detail-block ul {
     list-style: none;
     padding: 0;
 }
 
-.founder-achievements li {
+.founder-detail-block li {
     position: relative;
     padding-left: 20px;
     font-size: 14px;
     color: var(--text-light);
     line-height: 1.8;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.founder-achievements li::before {
+.founder-detail-block li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -772,6 +811,55 @@ img {
     height: 8px;
     background: var(--accent);
     border-radius: 50%;
+}
+
+.founder-detail-block li strong {
+    color: var(--text);
+}
+
+/* Awards grid */
+.awards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--light-warm);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent);
+}
+
+.award-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.award-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.award-item p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Founder web links row */
+.founder-web-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 /* ============ REGISTRATION ============ */
@@ -874,8 +962,8 @@ img {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .team-card {
@@ -915,22 +1003,42 @@ img {
 }
 
 .team-card-highlight .team-avatar {
-    border-color: var(--accent-light);
-    box-shadow: 0 0 20px rgba(244,196,48,0.3);
+    border-color: var(--secondary);
+    box-shadow: 0 0 20px rgba(212,119,11,0.25);
 }
 
 .team-card-highlight {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: var(--white);
-    border-color: var(--primary);
+    background: var(--white);
+    color: var(--text);
+    border: 2px solid var(--secondary);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
 }
 
 .team-card-highlight .team-role {
-    color: var(--accent-light);
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.team-card-highlight h4 {
+    color: var(--primary-dark);
+    font-size: 17px;
 }
 
 .team-card-highlight p {
-    color: rgba(255,255,255,0.8);
+    color: var(--text-light);
+    font-weight: 500;
 }
 
 .team-role {
@@ -954,8 +1062,20 @@ img {
     color: var(--text-light);
 }
 
+.team-location {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 12px;
+    background: rgba(26,83,92,0.08);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: var(--radius-xl);
+    letter-spacing: 0.3px;
+}
+
 .advisors-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .advisor-card {
@@ -985,6 +1105,11 @@ img {
     font-size: 12px;
     color: var(--text-light);
     line-height: 1.6;
+}
+
+.advisor-card .team-location {
+    margin-top: 6px;
+    font-size: 10px;
 }
 
 /* ============ BANK / DONATE DETAILS ============ */
@@ -1041,6 +1166,55 @@ img {
     font-size: 12px;
     opacity: 0.6;
     font-style: italic;
+}
+
+/* UPI Payment */
+.donate-upi {
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.donate-upi h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.upi-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-lg);
+}
+
+.upi-qr {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto 16px;
+    border-radius: var(--radius-sm);
+}
+
+.upi-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.upi-id {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.upi-hint {
+    font-size: 12px;
+    color: var(--text-light);
 }
 
 /* ============ MEDIA COVERAGE ============ */
@@ -1278,6 +1452,10 @@ img {
     gap: 24px;
 }
 
+.contact-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .contact-card {
     text-align: center;
     padding: 36px 24px;
@@ -1513,7 +1691,7 @@ img {
     .nav-links {
         display: none;
         position: absolute;
-        top: 72px;
+        top: 78px;
         left: 0;
         right: 0;
         background: var(--white);
@@ -1580,8 +1758,13 @@ img {
         justify-content: center;
     }
 
-    .founder-contact {
+    .founder-contact,
+    .founder-web-links {
         flex-direction: column;
+    }
+
+    .founder-tags {
+        justify-content: center;
     }
 
     .donate-contacts {

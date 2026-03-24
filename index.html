@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
@@ -15,25 +16,30 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-icon">&#x1F3DB;</span>
+                <img src="images/logo.png" alt="Deepstambh Logo" class="logo-img">
                 <div class="logo-text">
                     <span class="logo-marathi">दिपस्तंभ</span>
-                    <span class="logo-english">Deepstambh</span>
+                    <span class="logo-sub">ग्रामीण ग्रंथालय</span>
                 </div>
             </a>
+            <div class="lang-toggle" id="langToggle">
+                <span class="lang-option lang-en active">EN</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-option lang-mr">मराठी</span>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#founder">Founder</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#donate">Donate</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-en="Home" data-mr="मुख्यपृष्ठ">Home</a></li>
+                <li><a href="#about" data-en="About" data-mr="आमच्याबद्दल">About</a></li>
+                <li><a href="#mission" data-en="Mission" data-mr="ध्येय">Mission</a></li>
+                <li><a href="#founder" data-en="Founder" data-mr="संस्थापक">Founder</a></li>
+                <li><a href="#team" data-en="Team" data-mr="सदस्य">Team</a></li>
+                <li><a href="#media" data-en="Media" data-mr="प्रसारमाध्यमे">Media</a></li>
+                <li><a href="#gallery" data-en="Gallery" data-mr="गॅलरी">Gallery</a></li>
+                <li><a href="#donate" data-en="Donate" data-mr="देणगी">Donate</a></li>
+                <li><a href="#contact" data-en="Contact" data-mr="संपर्क">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -55,9 +61,9 @@
             <div class="floating-lamp fl-3">&#x1F31F;</div>
         </div>
         <div class="container hero-content">
-            <div class="hero-badge">Registered NGO | Maharashtra 43/2026</div>
+            <div class="hero-badge" data-en="Registered NGO | Maharashtra 43/2026" data-mr="नोंदणीकृत संस्था | महाराष्ट्र ४३/२०२६">Registered NGO | Maharashtra 43/2026</div>
             <div class="hero-logo-circle">
-                <img src="images/deepstambh-poster.jpg" alt="Deepstambh Logo" class="hero-logo-img">
+                <img src="images/logo.png" alt="Deepstambh Logo" class="hero-logo-img">
             </div>
             <h1 class="hero-title">
                 <span class="hero-marathi">दिपस्तंभ ग्रामीण ग्रंथालय</span>
@@ -66,11 +72,11 @@
             <p class="hero-tagline">चला वाचन करुया, अंधःकार दूर करुया</p>
             <p class="hero-tagline-en">Let's Read, Let's Remove Darkness</p>
             <div class="hero-actions">
-                <a href="#donate" class="btn btn-primary">Donate Books</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
+                <a href="#donate" class="btn btn-primary" data-en="Donate Books" data-mr="पुस्तके दान करा">Donate Books</a>
+                <a href="#about" class="btn btn-outline" data-en="Learn More" data-mr="अधिक जाणून घ्या">Learn More</a>
             </div>
             <div class="hero-scroll-hint">
-                <span>Scroll Down</span>
+                <span data-en="Scroll Down" data-mr="खाली स्क्रोल करा">Scroll Down</span>
                 <div class="scroll-arrow"></div>
             </div>
         </div>
@@ -82,27 +88,27 @@
     </section>
 
     <!-- Stats -->
-    <section class="stats-section">
+    <section class="stats-section" id="stats">
         <div class="container stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">&#x1F4DA;</div>
-                <div class="stat-number">1000+</div>
-                <div class="stat-label">Books Collected</div>
+                <div class="stat-number" data-count="1000">0</div>
+                <div class="stat-label" data-en="Books Collected" data-mr="पुस्तके संकलित">Books Collected</div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">&#x1F3E0;</div>
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Villages Reached</div>
+                <div class="stat-number" data-count="10">0</div>
+                <div class="stat-label" data-en="Villages Reached" data-mr="गावांपर्यंत पोहोचलो">Villages Reached</div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">&#x1F467;</div>
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Children Benefited</div>
+                <div class="stat-number" data-count="500">0</div>
+                <div class="stat-label" data-en="Children Benefited" data-mr="मुलांना लाभ">Children Benefited</div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">&#x1F91D;</div>
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Volunteers</div>
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label" data-en="Volunteers" data-mr="स्वयंसेवक">Volunteers</div>
             </div>
         </div>
     </section>
@@ -111,25 +117,25 @@
     <section class="section about-section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">About Us</span>
-                <h2 class="section-title">ग्रामीण भागासाठी लोकांनी लोकांसाठी सुरू केलेला ग्रंथालय उपक्रम</h2>
-                <p class="section-subtitle">A library initiative started by people, for people in rural areas</p>
+                <span class="section-tag" data-en="About Us" data-mr="आमच्याबद्दल">About Us</span>
+                <h2 class="section-title" data-en="A library initiative started by people, for people in rural areas" data-mr="ग्रामीण भागासाठी लोकांनी लोकांसाठी सुरू केलेला ग्रंथालय उपक्रम">A library initiative started by people, for people in rural areas</h2>
+                <p class="section-subtitle" data-en="A library initiative started by people, for people in rural areas" data-mr="ग्रामीण भागासाठी लोकांनी लोकांसाठी सुरू केलेला ग्रंथालय उपक्रम">A library initiative started by people, for people in rural areas</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="about-icon">&#x1F4D6;</div>
-                    <h3>Our Story</h3>
-                    <p>Deepstambh Gramin Granthalaya (दिपस्तंभ ग्रामीण ग्रंथालय) is a registered NGO based in Akola, Maharashtra. Founded with the vision of bringing the joy of reading to every village, we believe that knowledge is the true lighthouse (दिपस्तंभ) that can guide communities out of darkness.</p>
+                    <h3 data-en="Our Story" data-mr="आमची कथा">Our Story</h3>
+                    <p data-en="Deepstambh Gramin Granthalaya is a registered NGO based in Akola, Maharashtra. Founded with the vision of bringing the joy of reading to every village, we believe that knowledge is the true lighthouse that can guide communities out of darkness." data-mr="दिपस्तंभ ग्रामीण ग्रंथालय ही अकोला, महाराष्ट्र येथील नोंदणीकृत संस्था आहे. प्रत्येक गावात वाचनाचा आनंद पोहोचवण्याच्या दृष्टीने स्थापन केलेली, ज्ञान हा खरा दिपस्तंभ आहे जो समुदायांना अंधारातून बाहेर काढू शकतो असा आमचा विश्वास आहे.">Deepstambh Gramin Granthalaya is a registered NGO based in Akola, Maharashtra. Founded with the vision of bringing the joy of reading to every village, we believe that knowledge is the true lighthouse that can guide communities out of darkness.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">&#x2764;</div>
-                    <h3>Why We Exist</h3>
-                    <p>Rural communities in Maharashtra often lack access to quality reading material. Children grow up without libraries, limiting their imagination and learning. Deepstambh bridges this gap by establishing community libraries run by the people themselves.</p>
+                    <h3 data-en="Why We Exist" data-mr="आम्ही का अस्तित्वात आहोत">Why We Exist</h3>
+                    <p data-en="Rural communities in Maharashtra often lack access to quality reading material. Children grow up without libraries, limiting their imagination and learning. Deepstambh bridges this gap by establishing community libraries run by the people themselves." data-mr="महाराष्ट्रातील ग्रामीण समुदायांना दर्जेदार वाचन साहित्य मिळत नाही. मुले ग्रंथालयाशिवाय मोठी होतात, ज्यामुळे त्यांची कल्पनाशक्ती आणि शिक्षण मर्यादित होते. दिपस्तंभ लोकांनी चालवलेल्या सामुदायिक ग्रंथालयांद्वारे ही दरी भरून काढतो.">Rural communities in Maharashtra often lack access to quality reading material. Children grow up without libraries, limiting their imagination and learning. Deepstambh bridges this gap by establishing community libraries run by the people themselves.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">&#x1F31F;</div>
-                    <h3>Our Approach</h3>
-                    <p>We collect donated books, set up reading spaces in villages, and empower local volunteers to manage these libraries. Our model is sustainable, community-driven, and designed to foster a culture of reading from the grassroots level.</p>
+                    <h3 data-en="Our Approach" data-mr="आमचा दृष्टिकोन">Our Approach</h3>
+                    <p data-en="We collect donated books, set up reading spaces in villages, and empower local volunteers to manage these libraries. Our model is sustainable, community-driven, and designed to foster a culture of reading from the grassroots level." data-mr="आम्ही दान केलेली पुस्तके गोळा करतो, गावांमध्ये वाचन कक्ष उभारतो आणि स्थानिक स्वयंसेवकांना या ग्रंथालयांचे व्यवस्थापन करण्यासाठी सक्षम करतो. आमचा दृष्टिकोन टिकाऊ, समुदाय-चालित आणि तळागाळातून वाचन संस्कृती वाढवण्यासाठी आहे.">We collect donated books, set up reading spaces in villages, and empower local volunteers to manage these libraries. Our model is sustainable, community-driven, and designed to foster a culture of reading from the grassroots level.</p>
                 </div>
             </div>
         </div>
@@ -140,30 +146,30 @@
         <div class="mission-bg"></div>
         <div class="container">
             <div class="section-header light">
-                <span class="section-tag">Our Mission</span>
-                <h2 class="section-title">A Library in Every Village</h2>
-                <p class="section-subtitle">प्रत्येक गावात एक ग्रंथालय</p>
+                <span class="section-tag" data-en="Our Mission" data-mr="आमचे ध्येय">Our Mission</span>
+                <h2 class="section-title" data-en="A Library in Every Village" data-mr="प्रत्येक गावात एक ग्रंथालय">A Library in Every Village</h2>
+                <p class="section-subtitle" data-en="A Library in Every Village" data-mr="प्रत्येक गावात एक ग्रंथालय">A Library in Every Village</p>
             </div>
             <div class="mission-grid">
                 <div class="mission-card">
                     <div class="mission-number">01</div>
-                    <h3>Collect Books</h3>
-                    <p>नको असलेली वाचनीय पुस्तके दान करा — Donate readable books you no longer need. Every book finds a new home in a village library.</p>
+                    <h3 data-en="Collect Books" data-mr="पुस्तके गोळा करा">Collect Books</h3>
+                    <p data-en="Donate readable books you no longer need. Every book finds a new home in a village library." data-mr="नको असलेली वाचनीय पुस्तके दान करा. प्रत्येक पुस्तकाला गावातील ग्रंथालयात नवीन घर मिळते.">Donate readable books you no longer need. Every book finds a new home in a village library.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-number">02</div>
-                    <h3>Establish Libraries</h3>
-                    <p>Set up community reading spaces in rural villages across Maharashtra, starting with the Akola region.</p>
+                    <h3 data-en="Establish Libraries" data-mr="ग्रंथालये स्थापन करा">Establish Libraries</h3>
+                    <p data-en="Set up community reading spaces in rural villages across Maharashtra, starting with the Akola region." data-mr="अकोला विभागापासून सुरुवात करून महाराष्ट्रातील ग्रामीण गावांमध्ये सामुदायिक वाचन कक्ष उभारणे.">Set up community reading spaces in rural villages across Maharashtra, starting with the Akola region.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-number">03</div>
-                    <h3>Empower Communities</h3>
-                    <p>Train local volunteers to manage libraries, organize reading sessions, and build a lasting culture of learning.</p>
+                    <h3 data-en="Empower Communities" data-mr="समुदायांना सक्षम करा">Empower Communities</h3>
+                    <p data-en="Train local volunteers to manage libraries, organize reading sessions, and build a lasting culture of learning." data-mr="ग्रंथालये व्यवस्थापित करण्यासाठी, वाचन सत्र आयोजित करण्यासाठी आणि शिक्षणाची संस्कृती निर्माण करण्यासाठी स्थानिक स्वयंसेवकांना प्रशिक्षित करा.">Train local volunteers to manage libraries, organize reading sessions, and build a lasting culture of learning.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-number">04</div>
-                    <h3>Transform Lives</h3>
-                    <p>Through reading, we aim to open new doors of knowledge, imagination, and opportunity for rural children and families.</p>
+                    <h3 data-en="Transform Lives" data-mr="जीवन बदला">Transform Lives</h3>
+                    <p data-en="Through reading, we aim to open new doors of knowledge, imagination, and opportunity for rural children and families." data-mr="वाचनाद्वारे ग्रामीण मुलांसाठी आणि कुटुंबांसाठी ज्ञान, कल्पनाशक्ती आणि संधीचे नवे दरवाजे उघडणे हे आमचे ध्येय आहे.">Through reading, we aim to open new doors of knowledge, imagination, and opportunity for rural children and families.</p>
                 </div>
             </div>
         </div>
@@ -173,9 +179,9 @@
     <section class="section founder-section" id="founder">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Founder</span>
+                <span class="section-tag" data-en="Our Founder" data-mr="आमच्या संस्थापक">Our Founder</span>
                 <h2 class="section-title">Prof. Varsha Chopade</h2>
-                <p class="section-subtitle">The Visionary Behind Deepstambh</p>
+                <p class="section-subtitle" data-en="The Visionary Behind Deepstambh" data-mr="दिपस्तंभ मागील दूरदर्शी">The Visionary Behind Deepstambh</p>
             </div>
             <div class="founder-card">
                 <div class="founder-image">
@@ -183,27 +189,82 @@
                 </div>
                 <div class="founder-info">
                     <h3>Prof. Varsha Chopade</h3>
-                    <p class="founder-designation">Founder &amp; President, Deepstambh Rural Library NGO</p>
-                    <p class="founder-designation-sub">Asst. Professor (Strategic Stakeholder Management) | Author | Writer | Counsellor</p>
-                    <p class="founder-institution">Rajagiri College of Social Sciences (RCSS)<br>Kalamassery, Kochi - 683 104, Kerala, India</p>
-                    <p class="founder-bio">
-                        Prof. Varsha Chopade is an educator, author, environmentalist, Hindi &amp; Marathi poet, and a kind soul dedicated to social transformation. She founded Deepstambh with the mission to bring a library to every village. She has authored six books and is a special article writer for Saamana and Tarun Bharat (Maharashtra &amp; Karnataka), covering informative social issues across various topics.
+                    <p class="founder-designation">Founder &amp; President — Deepstambh Rural Library NGO, Maharashtra</p>
+                    <p class="founder-designation-sub">Assistant Professor, Rajagiri College of Social Sciences (RCSS), Kochi, Kerala</p>
+                    <p class="founder-tags">
+                        <span class="founder-tag">Author</span>
+                        <span class="founder-tag">Writer</span>
+                        <span class="founder-tag">Counsellor</span>
+                        <span class="founder-tag">Poet</span>
+                        <span class="founder-tag">Environmentalist</span>
+                        <span class="founder-tag">YouTuber</span>
                     </p>
-                    <div class="founder-achievements">
-                        <h4>Achievements &amp; Recognitions</h4>
+
+                    <!-- Professional Background -->
+                    <div class="founder-detail-block">
+                        <h4>Professional Background</h4>
+                        <p>Varsha Chopade holds many prestigious academic degrees and serves as an Assistant Professor at RCSS, focusing on Strategic Stakeholder Management. A multi-faceted professional, she is recognized as an author, writer, counsellor, and has undergone RJ training in Kerala. She conducted SWOT analysis of the Central Museum Library in Indore, MP, for which she received an excellent SWOT report certificate.</p>
+                    </div>
+
+                    <!-- Author & Media -->
+                    <div class="founder-detail-block">
+                        <h4>Author, Poet &amp; Media</h4>
                         <ul>
-                            <li>Made a short documentary on Dr. S.R. Ranganathan's life, screened at PM Office, Delhi on Librarians' Day</li>
-                            <li>Part of the "Paperless Library" short film</li>
-                            <li>Excellent Faculty Award (26 Jan 2017) by Bal Niketan Sangh, Indore, MP</li>
-                            <li>"Meena Tai Thakare" Inspirational Woman Award by Shivsena, Parel Mumbai</li>
-                            <li>Excellent SWOT Report Certificate from Central Museum, Indore, MP</li>
-                            <li>Member: MANLIBNET</li>
-                            <li>Hindi &amp; Marathi Book Reviewer, YouTuber, Environmentalist</li>
+                            <li>Authored <strong>six books</strong> and is a poet in both Hindi and Marathi</li>
+                            <li>Special article writer for <strong>Saamana</strong> &amp; <strong>Tarun Bharat</strong> (Maharashtra and Karnataka editions), focusing on social issues</li>
+                            <li>Created a short documentary on the life of <strong>Dr. S.R. Ranganathan</strong>, screened at the <strong>Prime Minister's Office (PMO), Delhi</strong> on Librarian's Day</li>
+                            <li>Part of the short film <strong>"Paperless Library"</strong></li>
+                            <li>Active <strong>YouTuber</strong> sharing informative content on social topics</li>
                         </ul>
                     </div>
+
+                    <!-- Social Work -->
+                    <div class="founder-detail-block">
+                        <h4>Social Work &amp; Environment</h4>
+                        <ul>
+                            <li>Founded <strong>Deepstambh Gramin Granthalaya</strong> — a rural library NGO promoting literacy in villages</li>
+                            <li>Active <strong>environmentalist</strong> and book reviewer in Hindi &amp; Marathi</li>
+                        </ul>
+                    </div>
+
+                    <!-- Awards -->
+                    <div class="founder-detail-block">
+                        <h4>Awards &amp; Recognitions</h4>
+                        <div class="awards-grid">
+                            <div class="award-item">
+                                <span class="award-icon">&#x1F3C6;</span>
+                                <div>
+                                    <strong>Excellent Faculty Award</strong>
+                                    <p>26 January 2017 — Bal Niketan Sangh, Indore, MP</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <span class="award-icon">&#x1F3C6;</span>
+                                <div>
+                                    <strong>"Meena Tai Thakare" Inspirational Woman Award</strong>
+                                    <p>Shivsena, Parel, Mumbai</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <span class="award-icon">&#x1F4DC;</span>
+                                <div>
+                                    <strong>Excellent SWOT Report Certificate</strong>
+                                    <p>Central Museum Library, Indore, MP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membership -->
+                    <div class="founder-detail-block">
+                        <h4>Professional Membership</h4>
+                        <p>Member of <strong>MANLIBNET</strong> (Management Libraries Network)</p>
+                    </div>
+
                     <div class="founder-quote">
                         <blockquote>"ग्रामीण भागासाठी लोकांनी लोकांसाठी — A library by the people, for the people."</blockquote>
                     </div>
+
                     <div class="founder-contact">
                         <a href="mailto:varsha@rajagiri.edu" class="founder-link">
                             <span class="link-icon">&#x2709;</span> varsha@rajagiri.edu
@@ -214,8 +275,19 @@
                         <a href="tel:+919340485228" class="founder-link">
                             <span class="link-icon">&#x260E;</span> +91 93404 85228
                         </a>
+                    </div>
+                    <div class="founder-web-links">
+                        <a href="https://rajagiri.edu/" target="_blank" rel="noopener noreferrer" class="founder-link">
+                            <span class="link-icon">&#x1F310;</span> Rajagiri.edu
+                        </a>
+                        <a href="https://rajagiri.irins.org/myprofile" target="_blank" rel="noopener noreferrer" class="founder-link">
+                            <span class="link-icon">&#x1F393;</span> IRINS Profile
+                        </a>
                         <a href="https://orcid.org/0000-0002-9001-4865" target="_blank" rel="noopener noreferrer" class="founder-link">
                             <span class="link-icon">&#x1F517;</span> ORCID Profile
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCAVuc0ywjDELKXa2inFs6jg" target="_blank" rel="noopener noreferrer" class="founder-link">
+                            <span class="link-icon">&#x25B6;</span> YouTube Channel
                         </a>
                     </div>
                 </div>
@@ -228,7 +300,7 @@
         <div class="container">
             <div class="registration-card">
                 <div class="reg-icon">&#x1F4DC;</div>
-                <h3>Officially Registered NGO</h3>
+                <h3 data-en="Officially Registered NGO" data-mr="अधिकृत नोंदणीकृत संस्था">Officially Registered NGO</h3>
                 <p>Deepstambh Gramin Granthalaya is registered under the Societies Registration Act, 1860 (Act 21 of 1860).</p>
                 <div class="reg-details">
                     <div class="reg-item">
@@ -252,14 +324,14 @@
     <section class="section team-section" id="team">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Team</span>
-                <h2 class="section-title">Members &amp; Leadership</h2>
-                <p class="section-subtitle">The dedicated people behind Deepstambh</p>
+                <span class="section-tag" data-en="Our Team" data-mr="आमचा संघ">Our Team</span>
+                <h2 class="section-title" data-en="Members &amp; Leadership" data-mr="सदस्य आणि नेतृत्व">Members &amp; Leadership</h2>
+                <p class="section-subtitle" data-en="The dedicated people behind Deepstambh" data-mr="दिपस्तंभ मागील समर्पित लोक">The dedicated people behind Deepstambh</p>
             </div>
 
             <!-- Core Members -->
             <div class="team-group">
-                <h3 class="team-group-title">Core Members</h3>
+                <h3 class="team-group-title" data-en="Core Members" data-mr="मुख्य सदस्य">Core Members</h3>
                 <div class="team-grid">
                     <div class="team-card team-card-highlight">
                         <div class="team-avatar">
@@ -267,7 +339,8 @@
                         </div>
                         <div class="team-role">Founder &amp; President</div>
                         <h4>Prof. Varsha Chopade</h4>
-                        <p>Asst. Professor, RCSS Kochi, Kerala</p>
+                        <p>Asst. Professor, RCSS</p>
+                        <span class="team-location">Kochi, Kerala, India</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -275,7 +348,8 @@
                         </div>
                         <div class="team-role">Vice President</div>
                         <h4>Aaditi Chopade</h4>
-                        <p>USA</p>
+                        <p>&nbsp;</p>
+                        <span class="team-location">USA</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -284,6 +358,7 @@
                         <div class="team-role">Member</div>
                         <h4>Shri. Manoharrao Baliramji Shegokar</h4>
                         <p>Sonala</p>
+                        <span class="team-location">Maharashtra, India</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -292,6 +367,7 @@
                         <div class="team-role">Member</div>
                         <h4>Mrs. Meena Rameshrao Bundile</h4>
                         <p>Daryapur, Amravati</p>
+                        <span class="team-location">Maharashtra, India</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -300,6 +376,7 @@
                         <div class="team-role">Member</div>
                         <h4>Shri. Vijay Shegokar</h4>
                         <p>Agricultural Officer, Akola</p>
+                        <span class="team-location">Maharashtra, India</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -307,7 +384,8 @@
                         </div>
                         <div class="team-role">Member</div>
                         <h4>Saimira Chopade</h4>
-                        <p>USA</p>
+                        <p>&nbsp;</p>
+                        <span class="team-location">USA</span>
                     </div>
                     <div class="team-card">
                         <div class="team-avatar">
@@ -316,57 +394,74 @@
                         <div class="team-role">Member</div>
                         <h4>Shri. Kisan Chopade</h4>
                         <p>DGM, BPCL</p>
+                        <span class="team-location">India</span>
                     </div>
                 </div>
             </div>
 
             <!-- Special Thanks / Advisors -->
             <div class="team-group">
-                <h3 class="team-group-title">Special Thanks &amp; Advisors</h3>
+                <h3 class="team-group-title" data-en="Special Thanks &amp; Advisors" data-mr="विशेष आभार आणि सल्लागार">Special Thanks &amp; Advisors</h3>
                 <div class="team-grid advisors-grid">
                     <div class="advisor-card">
+                        <h4>Prof. Fr. Saju MD, Ph.D</h4>
+                        <p>Principal &amp; Professor, RCSS</p>
+                        <span class="team-location">Kochi, Kerala, India</span>
+                    </div>
+                    <div class="advisor-card">
+                        <h4>Dr. Binoy Joseph</h4>
+                        <p>Associate Director &amp; Professor, RCSS</p>
+                        <span class="team-location">Kochi, Kerala, India</span>
+                    </div>
+                    <div class="advisor-card">
                         <h4>Shri Ganesh Bhorkade</h4>
-                        <p>Registrar, IIT Bombay, India</p>
+                        <p>Registrar, IIT Bombay</p>
+                        <span class="team-location">Mumbai, Maharashtra, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Prof. Jaya Borakade</h4>
                         <p>Educator</p>
-                    </div>
-                    <div class="advisor-card">
-                        <h4>Dr. Binoy Joseph</h4>
-                        <p>Associate Director &amp; Professor, RCSS Kochi, Kerala</p>
-                    </div>
-                    <div class="advisor-card">
-                        <h4>Prof. Fr. Saju MD, Ph.D</h4>
-                        <p>Principal &amp; Professor, RCSS Kochi, Kerala</p>
+                        <span class="team-location">India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Prof. Nandkishor Chandan</h4>
-                        <p>Ph.D, University of Oxford, England</p>
+                        <p>Ph.D, University of Oxford</p>
+                        <span class="team-location">Oxford, England, UK</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Akhtar Parvej</h4>
-                        <p>Gyan Bharatam, Delhi, India</p>
+                        <p>Gyan Bharatam</p>
+                        <span class="team-location">Delhi, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Vidhya &amp; Dr. Sahebrao Ingle</h4>
-                        <p>Yavatmal, Maharashtra, India</p>
+                        <p>&nbsp;</p>
+                        <span class="team-location">Yavatmal, Maharashtra, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Prof. Dr. Dilip Mistri</h4>
-                        <p>CSMU, Panvel, Navi Mumbai, India</p>
+                        <p>CSMU, Panvel</p>
+                        <span class="team-location">Navi Mumbai, Maharashtra, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Vijesh P V</h4>
-                        <p>Librarian, RCSS Kochi, Kerala</p>
+                        <p>Librarian, RCSS</p>
+                        <span class="team-location">Kochi, Kerala, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Anil Kumar Jharotia</h4>
-                        <p>Delhi, India</p>
+                        <p>&nbsp;</p>
+                        <span class="team-location">Delhi, India</span>
                     </div>
                     <div class="advisor-card">
                         <h4>Dr. Nileema &amp; Dr. Vinayak Admane</h4>
-                        <p>Indore, Madhya Pradesh, India</p>
+                        <p>&nbsp;</p>
+                        <span class="team-location">Indore, Madhya Pradesh, India</span>
+                    </div>
+                    <div class="advisor-card">
+                        <h4>Ruchika Ankalikar</h4>
+                        <p>Software Engineer &amp; Project Manager</p>
+                        <span class="team-location">Toronto, Canada</span>
                     </div>
                 </div>
             </div>
@@ -377,8 +472,8 @@
     <section class="section media-section" id="media">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">In the News</span>
-                <h2 class="section-title">Media Coverage</h2>
+                <span class="section-tag" data-en="In the News" data-mr="बातम्यांमध्ये">In the News</span>
+                <h2 class="section-title" data-en="Media Coverage" data-mr="प्रसारमाध्यमे कव्हरेज">Media Coverage</h2>
                 <p class="section-subtitle">Deepstambh's work recognized by leading Marathi newspapers</p>
             </div>
             <div class="media-grid">
@@ -423,13 +518,13 @@
     <section class="section gallery-section" id="gallery">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Gallery</span>
-                <h2 class="section-title">Our Work in Pictures</h2>
+                <span class="section-tag" data-en="Gallery" data-mr="गॅलरी">Gallery</span>
+                <h2 class="section-title" data-en="Our Work in Pictures" data-mr="चित्रांमधील आमचे कार्य">Our Work in Pictures</h2>
                 <p class="section-subtitle">Glimpses of Deepstambh's journey in rural Maharashtra</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="images/deepstambh-poster.jpg" alt="Deepstambh poster - चला वाचन करुया, अंधःकार दूर करुया" loading="lazy">
+                    <img src="images/deepstambh-poster.jpg" alt="Deepstambh poster" loading="lazy">
                     <div class="gallery-caption">
                         <h4>Our Campaign Poster</h4>
                         <p>चला वाचन करुया, अंधःकार दूर करुया</p>
@@ -449,8 +544,21 @@
                         <p>Prof. Varsha Chopade, RCSS Kochi</p>
                     </div>
                 </div>
+                <div class="gallery-item">
+                    <img src="images/event-inauguration-1.jpg" alt="Deepstambh library inauguration event - address session" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Library Inauguration</h4>
+                        <p>Addressing the community at Deepstambh library launch</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/event-inauguration-2.jpg" alt="Deepstambh library inauguration - group photo with community members" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Community Together</h4>
+                        <p>Village leaders and members at the Deepstambh inauguration</p>
+                    </div>
+                </div>
             </div>
-            <p class="gallery-note">More images coming soon...</p>
         </div>
     </section>
 
@@ -458,29 +566,29 @@
     <section class="section donate-section" id="donate">
         <div class="container">
             <div class="section-header light">
-                <span class="section-tag">Get Involved</span>
-                <h2 class="section-title">नको असलेली वाचनीय पुस्तके दान करा</h2>
-                <p class="section-subtitle">Donate Readable Books You No Longer Need</p>
+                <span class="section-tag" data-en="Get Involved" data-mr="सहभागी व्हा">Get Involved</span>
+                <h2 class="section-title" data-en="Donate Readable Books You No Longer Need" data-mr="नको असलेली वाचनीय पुस्तके दान करा">Donate Readable Books You No Longer Need</h2>
+                <p class="section-subtitle" data-en="Donate Readable Books You No Longer Need" data-mr="नको असलेली वाचनीय पुस्तके दान करा">Donate Readable Books You No Longer Need</p>
             </div>
             <div class="donate-grid">
                 <div class="donate-card">
                     <div class="donate-icon">&#x1F4DA;</div>
-                    <h3>Donate Books</h3>
-                    <p>Share your pre-loved books — textbooks, storybooks, novels, encyclopedias, and educational material in Marathi, Hindi, or English.</p>
+                    <h3 data-en="Donate Books" data-mr="पुस्तके दान करा">Donate Books</h3>
+                    <p data-en="Share your pre-loved books — textbooks, storybooks, novels, encyclopedias, and educational material in Marathi, Hindi, or English." data-mr="तुमची जुनी पुस्तके सामायिक करा — पाठ्यपुस्तके, कथापुस्तके, कादंबऱ्या, ज्ञानकोश आणि मराठी, हिंदी किंवा इंग्रजीतील शैक्षणिक साहित्य.">Share your pre-loved books — textbooks, storybooks, novels, encyclopedias, and educational material in Marathi, Hindi, or English.</p>
                 </div>
                 <div class="donate-card">
                     <div class="donate-icon">&#x1F64B;</div>
-                    <h3>Volunteer</h3>
-                    <p>Join us as a volunteer to help organize books, set up libraries, or conduct reading sessions in villages.</p>
+                    <h3 data-en="Volunteer" data-mr="स्वयंसेवक व्हा">Volunteer</h3>
+                    <p data-en="Join us as a volunteer to help organize books, set up libraries, or conduct reading sessions in villages." data-mr="पुस्तके व्यवस्थापित करण्यासाठी, ग्रंथालये उभारण्यासाठी किंवा गावांमध्ये वाचन सत्र आयोजित करण्यासाठी स्वयंसेवक म्हणून सामील व्हा.">Join us as a volunteer to help organize books, set up libraries, or conduct reading sessions in villages.</p>
                 </div>
                 <div class="donate-card">
                     <div class="donate-icon">&#x1F4B0;</div>
-                    <h3>Financial Support</h3>
-                    <p>Help us with logistics, infrastructure, and operations by making a financial contribution to Deepstambh.</p>
+                    <h3 data-en="Financial Support" data-mr="आर्थिक मदत">Financial Support</h3>
+                    <p data-en="Help us with logistics, infrastructure, and operations by making a financial contribution to Deepstambh." data-mr="दिपस्तंभला रसद, पायाभूत सुविधा आणि कार्यसंचालनासाठी आर्थिक योगदान देऊन मदत करा.">Help us with logistics, infrastructure, and operations by making a financial contribution to Deepstambh.</p>
                 </div>
             </div>
             <div class="donate-bank">
-                <h3>Bank Transfer Details</h3>
+                <h3 data-en="Bank Transfer Details" data-mr="बँक हस्तांतरण तपशील">Bank Transfer Details</h3>
                 <div class="bank-details">
                     <div class="bank-item">
                         <span class="bank-label">Bank</span>
@@ -499,10 +607,21 @@
                         <span class="bank-value">Varsha Chopade (Deepstambh)</span>
                     </div>
                 </div>
-                <p class="bank-note">Dedicated Deepstambh NGO bank account coming soon. UPI payments also accepted.</p>
+                <p class="bank-note">Dedicated Deepstambh NGO bank account coming soon.</p>
+            </div>
+            <div class="donate-upi">
+                <h3 data-en="Pay via UPI" data-mr="UPI द्वारे पैसे पाठवा">Pay via UPI</h3>
+                <div class="upi-card">
+                    <img src="images/upi-payment.jpeg" alt="Scan QR code to pay via UPI - Varsha Chopade" class="upi-qr" loading="lazy">
+                    <div class="upi-info">
+                        <p class="upi-name">Varsha Chopade</p>
+                        <p class="upi-id">UPI ID: varshakisanc@oksbi</p>
+                        <p class="upi-hint">Scan with any UPI app — Google Pay, PhonePe, Paytm, etc.</p>
+                    </div>
+                </div>
             </div>
             <div class="donate-cta">
-                <p>To donate books or contribute, please contact us:</p>
+                <p data-en="To donate books or contribute, please contact us:" data-mr="पुस्तके दान करण्यासाठी किंवा योगदान देण्यासाठी, कृपया आमच्याशी संपर्क साधा:">To donate books or contribute, please contact us:</p>
                 <div class="donate-contacts">
                     <a href="mailto:varsha@rajagiri.edu" class="btn btn-light">varsha@rajagiri.edu</a>
                     <a href="mailto:deepakola481@gmail.com" class="btn btn-light">deepakola481@gmail.com</a>
@@ -516,31 +635,26 @@
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Contact Us</span>
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">We'd love to hear from you</p>
+                <span class="section-tag" data-en="Contact Us" data-mr="आमच्याशी संपर्क साधा">Contact Us</span>
+                <h2 class="section-title" data-en="Get in Touch" data-mr="संपर्कात रहा">Get in Touch</h2>
+                <p class="section-subtitle" data-en="We'd love to hear from you" data-mr="आम्हाला तुमच्याकडून ऐकायला आवडेल">We'd love to hear from you</p>
             </div>
-            <div class="contact-grid">
+            <div class="contact-grid contact-grid-3">
                 <div class="contact-card">
                     <div class="contact-icon">&#x1F4CD;</div>
-                    <h4>Address</h4>
-                    <p>Aadisai Nivas, Ranpise Nagar,<br>Akola - 444001,<br>Maharashtra, India</p>
+                    <h4 data-en="Address" data-mr="पत्ता">Address</h4>
+                    <p><strong>Varsha Chopade</strong><br>Aadisai Nivas, Ranpise Nagar,<br>Akola - 444001,<br>Maharashtra, India</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">&#x2709;</div>
-                    <h4>Email</h4>
-                    <p><a href="mailto:varsha@rajagiri.edu">varsha@rajagiri.edu</a></p>
+                    <h4 data-en="Email" data-mr="ईमेल">Email</h4>
                     <p><a href="mailto:deepakola481@gmail.com">deepakola481@gmail.com</a></p>
+                    <p><a href="mailto:varsha@rajagiri.edu">varsha@rajagiri.edu</a></p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">&#x260E;</div>
-                    <h4>Phone</h4>
+                    <h4 data-en="Phone" data-mr="फोन">Phone</h4>
                     <p><a href="tel:+919340485228">+91 93404 85228</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">&#x1F3EB;</div>
-                    <h4>Affiliated With</h4>
-                    <p>Rajagiri College of Social Sciences (RCSS)<br>Kochi, Kerala, India</p>
                 </div>
             </div>
         </div>
@@ -557,14 +671,14 @@
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#mission">Mission</a>
-                    <a href="#donate">Donate Books</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" data-en="Home" data-mr="मुख्यपृष्ठ">Home</a>
+                    <a href="#about" data-en="About" data-mr="आमच्याबद्दल">About</a>
+                    <a href="#mission" data-en="Mission" data-mr="ध्येय">Mission</a>
+                    <a href="#donate" data-en="Donate Books" data-mr="पुस्तके दान करा">Donate Books</a>
+                    <a href="#contact" data-en="Contact" data-mr="संपर्क">Contact</a>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact</h4>
+                    <h4 data-en="Contact" data-mr="संपर्क">Contact</h4>
                     <p>Aadisai Nivas, Ranpise Nagar,<br>Akola - 444001, Maharashtra</p>
                     <p>varsha@rajagiri.edu</p>
                     <p>deepakola481@gmail.com</p>
@@ -587,6 +701,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#x2191;</button>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery image enlarged">
+    </div>
 
     <script src="script.js"></script>
 </body>
