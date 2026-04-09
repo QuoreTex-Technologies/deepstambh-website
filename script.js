@@ -66,7 +66,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.stat-card, .about-card, .mission-card, .donate-card, .contact-card, .gallery-item, .media-card, .team-card, .advisor-card').forEach(el => {
+document.querySelectorAll('.stat-card, .about-card, .mission-card, .donate-card, .contact-card, .gallery-item, .media-card, .team-card, .advisor-card, .inspiration-card').forEach(el => {
     observer.observe(el);
 });
 
@@ -114,7 +114,7 @@ window.addEventListener('scroll', () => {
         const link = document.querySelector(`.nav-links a[href="#${id}"]`);
         if (link) {
             if (scrollPos >= top && scrollPos < top + height) {
-                link.style.color = '#1A535C';
+                link.style.color = '#1a1a1a';
                 link.style.fontWeight = '600';
             } else {
                 link.style.color = '';

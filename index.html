@@ -6,7 +6,7 @@
     <title>दिपस्तंभ ग्रामीण ग्रंथालय | Deepstambh Rural Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -46,44 +46,24 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg-image"></div>
-        <div class="hero-overlay"></div>
-        <!-- Floating animated elements -->
-        <div class="hero-particles">
-            <div class="floating-book fb-1">&#x1F4D6;</div>
-            <div class="floating-book fb-2">&#x1F4DA;</div>
-            <div class="floating-book fb-3">&#x1F4D5;</div>
-            <div class="floating-book fb-4">&#x1F4D7;</div>
-            <div class="floating-book fb-5">&#x1F4D8;</div>
-            <div class="floating-book fb-6">&#x1F4D9;</div>
-            <div class="floating-lamp fl-1">&#x1F3EE;</div>
-            <div class="floating-lamp fl-2">&#x2728;</div>
-            <div class="floating-lamp fl-3">&#x1F31F;</div>
-        </div>
         <div class="container hero-content">
-            <div class="hero-badge" data-en="Registered NGO | Maharashtra 43/2026" data-mr="नोंदणीकृत संस्था | महाराष्ट्र ४३/२०२६">Registered NGO | Maharashtra 43/2026</div>
-            <div class="hero-logo-circle">
-                <img src="images/logo.png" alt="Deepstambh Logo" class="hero-logo-img">
+            <div class="hero-text">
+                <span class="hero-eyebrow" data-en="Registered NGO · Maharashtra 43/2026" data-mr="नोंदणीकृत संस्था · महाराष्ट्र ४३/२०२६">Registered NGO · Maharashtra 43/2026</span>
+                <h1 class="hero-title">
+                    <span class="hero-marathi">दिपस्तंभ</span>
+                    <span class="hero-sub">ग्रामीण ग्रंथालय</span>
+                    <span class="hero-english">A library in every village.</span>
+                </h1>
+                <p class="hero-tagline">चला वाचन करुया, अंधःकार दूर करुया</p>
+                <p class="hero-tagline-en" data-en="We collect donated books and establish community libraries in rural Maharashtra — so every child grows up with access to reading." data-mr="आम्ही दान केलेली पुस्तके गोळा करतो आणि ग्रामीण महाराष्ट्रात सामुदायिक ग्रंथालये स्थापन करतो — जेणेकरून प्रत्येक मुलाला वाचनाची संधी मिळेल.">We collect donated books and establish community libraries in rural Maharashtra — so every child grows up with access to reading.</p>
+                <div class="hero-actions">
+                    <a href="#donate" class="btn btn-primary" data-en="Donate Books" data-mr="पुस्तके दान करा">Donate Books</a>
+                    <a href="#about" class="btn btn-outline" data-en="Our Story" data-mr="आमची कथा">Our Story</a>
+                </div>
             </div>
-            <h1 class="hero-title">
-                <span class="hero-marathi">दिपस्तंभ ग्रामीण ग्रंथालय</span>
-                <span class="hero-english">Deepstambh Rural Library</span>
-            </h1>
-            <p class="hero-tagline">चला वाचन करुया, अंधःकार दूर करुया</p>
-            <p class="hero-tagline-en">Let's Read, Let's Remove Darkness</p>
-            <div class="hero-actions">
-                <a href="#donate" class="btn btn-primary" data-en="Donate Books" data-mr="पुस्तके दान करा">Donate Books</a>
-                <a href="#about" class="btn btn-outline" data-en="Learn More" data-mr="अधिक जाणून घ्या">Learn More</a>
+            <div class="hero-visual">
+                <img src="images/children.png" alt="Children reading books in a rural village library" class="hero-img-main" loading="eager">
             </div>
-            <div class="hero-scroll-hint">
-                <span data-en="Scroll Down" data-mr="खाली स्क्रोल करा">Scroll Down</span>
-                <div class="scroll-arrow"></div>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,64 C360,120 720,0 1440,64 L1440,120 L0,120 Z" fill="#ffffff"/>
-            </svg>
         </div>
     </section>
 
@@ -95,7 +75,7 @@
                 <div class="stat-number" data-count="1000">0</div>
                 <div class="stat-label" data-en="Books Collected" data-mr="पुस्तके संकलित">Books Collected</div>
             </div>
-            <div class="stat-5">
+            <div class="stat-card">
                 <div class="stat-icon">&#x1F3E0;</div>
                 <div class="stat-number" data-count="10">0</div>
                 <div class="stat-label" data-en="Villages Reached" data-mr="गावांपर्यंत पोहोचलो">Villages Reached</div>
@@ -118,8 +98,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-en="About Us" data-mr="आमच्याबद्दल">About Us</span>
-                <h2 class="section-title" data-en="A library initiative started by people, for people in rural areas" data-mr="ग्रामीण भागासाठी लोकांनी लोकांसाठी सुरू केलेला ग्रंथालय उपक्रम">A library initiative started by people, for people in rural areas</h2>
-                <p class="section-subtitle" data-en="A library initiative started by people, for people in rural areas" data-mr="ग्रामीण भागासाठी लोकांनी लोकांसाठी सुरू केलेला ग्रंथालय उपक्रम">A library initiative started by people, for people in rural areas</p>
+                <h2 class="section-title" data-en="By the people, for the people." data-mr="लोकांनी, लोकांसाठी.">By the people, for the people.</h2>
+                <p class="section-subtitle" data-en="A grassroots library initiative rooted in rural Maharashtra." data-mr="ग्रामीण महाराष्ट्रात रुजलेला एक तळागाळातील ग्रंथालय उपक्रम.">A grassroots library initiative rooted in rural Maharashtra.</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
@@ -148,7 +128,7 @@
             <div class="section-header light">
                 <span class="section-tag" data-en="Our Mission" data-mr="आमचे ध्येय">Our Mission</span>
                 <h2 class="section-title" data-en="A Library in Every Village" data-mr="प्रत्येक गावात एक ग्रंथालय">A Library in Every Village</h2>
-                <p class="section-subtitle" data-en="A Library in Every Village" data-mr="प्रत्येक गावात एक ग्रंथालय">A Library in Every Village</p>
+                <p class="section-subtitle" data-en="Four steps. One goal. Reading wherever children grow up." data-mr="चार पावले. एक ध्येय. मुलांच्या प्रत्येक गावात वाचन.">Four steps. One goal. Reading wherever children grow up.</p>
             </div>
             <div class="mission-grid">
                 <div class="mission-card">
@@ -176,48 +156,43 @@
     </section>
 
     <!-- Inspiration Section -->
-<section class="section founder-section" id="inspiration">
+<section class="section inspiration-section" id="inspiration">
     <div class="container">
-
         <div class="section-header">
-            <span class="section-tag" data-en="Our Inspirations" data-mr="प्रेरणा">Inspiration</span>
-            <h2 class="section-title">Inspiration of Deepstambh</h2>
-            <p class="section-subtitle">Great Personalities Who Inspire Us</p>
+            <span class="section-tag" data-en="Inspiration" data-mr="प्रेरणा">Inspiration</span>
+            <h2 class="section-title" data-en="Shoulders we stand on" data-mr="ज्यांच्या खांद्यावर आम्ही उभे आहोत">Shoulders we stand on</h2>
+            <p class="section-subtitle" data-en="The visionaries whose lives shape our mission." data-mr="ज्यांच्या जीवनाने आमच्या ध्येयाला आकार दिला ते द्रष्टे.">The visionaries whose lives shape our mission.</p>
         </div>
-
-        <!-- Card 1 -->
-        <div class="founder-card">
-            <div class="founder-image">
-                <img src="images/shivaji.jpeg" alt="Shivaji Maharaj">
-            </div>
-            <div class="founder-info">
-                <h3>छत्रपती शिवाजी महाराज</h3>
-                <p>स्वराज्य हा माझा जन्मसिद्ध हक्क आहे</p>
-            </div>
+        <div class="inspiration-grid">
+            <figure class="inspiration-card">
+                <img src="images/shivaji.jpeg" alt="Chhatrapati Shivaji Maharaj" loading="lazy">
+                <figcaption>
+                    <h4>छत्रपती शिवाजी महाराज</h4>
+                    <p>"स्वराज्य हा माझा जन्मसिद्ध हक्क आहे"</p>
+                </figcaption>
+            </figure>
+            <figure class="inspiration-card">
+                <img src="images/SawitriBai.jpeg" alt="Savitribai Phule" loading="lazy">
+                <figcaption>
+                    <h4>सावित्रीबाई फुले</h4>
+                    <p>"शिक्षण हेच खरे स्वातंत्र्याचे साधन आहे"</p>
+                </figcaption>
+            </figure>
+            <figure class="inspiration-card">
+                <img src="images/ranganathan.jpeg" alt="Dr. S. R. Ranganathan" loading="lazy">
+                <figcaption>
+                    <h4>Dr. S. R. Ranganathan</h4>
+                    <p>Father of Library Science</p>
+                </figcaption>
+            </figure>
+            <figure class="inspiration-card">
+                <img src="images/ShaliniTaiMoghe.jpeg" alt="Shalini Tai Moghe" loading="lazy">
+                <figcaption>
+                    <h4>शालिनी ताई मोघे</h4>
+                    <p>Social reformer &amp; educator</p>
+                </figcaption>
+            </figure>
         </div>
-
-        <!-- Card 2 -->
-        <div class="founder-card">
-            <div class="founder-image">
-                <img src="images/SawitriBai.jpeg" alt="Savitribai Phule">
-            </div>
-            <div class="founder-info">
-                <h3>सावित्रीबाई फुले</h3>
-                <p>शिक्षण हेच खरे स्वातंत्र्याचे साधन आहे</p>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="founder-card">
-            <div class="founder-image">
-                <img src="images/ranganathan.jpeg" alt="SR Ranganathan">
-            </div>
-            <div class="founder-info">
-                <h3>Dr. S. R. Ranganathan</h3>
-                <p>Father of Library Science</p>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -613,8 +588,8 @@
         <div class="container">
             <div class="section-header light">
                 <span class="section-tag" data-en="Get Involved" data-mr="सहभागी व्हा">Get Involved</span>
-                <h2 class="section-title" data-en="Donate Readable Books You No Longer Need" data-mr="नको असलेली वाचनीय पुस्तके दान करा">Donate Readable Books You No Longer Need</h2>
-                <p class="section-subtitle" data-en="Donate Readable Books You No Longer Need" data-mr="नको असलेली वाचनीय पुस्तके दान करा">Donate Readable Books You No Longer Need</p>
+                <h2 class="section-title" data-en="Support a library. Transform a village." data-mr="एका ग्रंथालयाला साथ द्या. एक गाव बदला.">Support a library. Transform a village.</h2>
+                <p class="section-subtitle" data-en="Donate books, funds, or your time — every contribution lights a lamp." data-mr="पुस्तके, निधी किंवा वेळ दान करा — प्रत्येक योगदान एक दिवा लावते.">Donate books, funds, or your time — every contribution lights a lamp.</p>
             </div>
             <div class="donate-grid">
                 <div class="donate-card">
