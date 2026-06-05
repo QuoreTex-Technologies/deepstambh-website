@@ -566,10 +566,12 @@ p  { color: var(--ink-soft); }
 }
 .founder-section .founder-image {
     position: sticky;
-    top: 110px;
+    top: 100px;
+   
 }
 .founder-section .founder-image img {
-    width: 100%;
+    width: 80%;
+     height:80%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: top center;
